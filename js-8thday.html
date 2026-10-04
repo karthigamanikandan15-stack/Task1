@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    .main{
+        display:flex;
+        gap: 50px;
+
+    }
+      .con1{
+            width: 350px;
+            min-height: 250px;
+            border: 2px solid black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            
+        }
+        #con2{
+            width: 350px;
+            height: 250px;
+            border: 2px solid black;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            margin: 10px;
+            justify-content: space-between;
+
+        }
+        
+        input {
+            width: 90%;
+            padding: 5px;
+            margin: 5px;
+        }
+
+
+        button {
+            padding: 10px 20px;
+            row-gap: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+    button:hover{
+        background-color: blue;
+        color: white;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="main">
+<div class="con1">
+        <h2>Student Marks</h2>
+
+       Name: <input type="text" id="studentname">
+       Tamil: <input type="number" id="mark1">
+       English: <input type="number" id="mark2">
+    Maths: <input type="number" id="mark3"><br>
+        <button onclick="calculate()">CALCULATE</button>
+        
+    </div>
+    <div id="con2">
+        <H2> Result </H2>
+    <span id="sname">Name:</span>
+    <span id="sum">Sum:</span>
+    <span id="average">Average:</span>
+    <span id="per">Percentage:%</span>
+    <span id="rank">Grade:</span>
+          ` 
+    </div>
+
+ 
+    <script>
+    function calculate()
+    {
+        let name=document.getElementById("studentname").value;
+        let tamil = Number(document.getElementById("mark1").value);
+        let english = Number(document.getElementById("mark2").value);
+        let maths = Number(document.getElementById("mark3").value);
+       
+        document.getElementById('sname').innerHTML=name;
+        let total;
+        total=  tamil + english+ maths;
+        // console.log(total)
+        document.getElementById('sum').innerHTML=total;
+
+        let avg;
+        avg= total/3;
+        // console.log(avg)
+        document.getElementById('average').innerHTML=avg;
+
+        let percentage;
+        percentage=(total/300)*100;
+        // console.log(percentage)
+        document.getElementById('per').innerHTML=percentage;
+
+        let grade;
+        if (percentage >= 90) {
+
+                grade = "A+";
+
+            } else {
+
+                grade = "A";
+
+            }
+            // console.log(grade)
+            document.getElementById('rank').innerHTML=grade;
+
+           
+
+
+//             let result=`
+          
+//     <H2> Result </H2>
+//     <span id="sname">Name:${name}</span>
+//     <span id="sum">Sum:${total}</span>
+//     <span id="average">Average:${avg}</span>
+//     <span id="per">Percentage:${percentage}%</span>
+//     <span id="rank">Grade:${grade}</span>
+    
+//             `
+// document.getElementById('con2').innerHTML= result;
+        }
+
+    </script>
+ </div>
+</body>
+</html>

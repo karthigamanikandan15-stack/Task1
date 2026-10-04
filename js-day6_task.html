@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let price= Number(prompt("Enter your amount"));
+    console.log(price)
+    let amount;
+
+    if (price>=3000)
+    {
+     amount= price -( price *0.10)
+
+    }
+    else
+    {
+        amount=price;
+
+    }
+    // alert("Payable Amount : " +Math.round(amount));
+    alert("Payable Amount : " +amount.toFixed(2));
+
+    </script>
+</body>
+</html>

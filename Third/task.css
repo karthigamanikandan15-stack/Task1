@@ -1,0 +1,18 @@
+/* .head
+{
+    background-color: orange !important;
+    color: black;
+
+} */
+ #head1{
+    display: none;
+ }
+ #head1:target{
+    display: block;
+ }
+
+
+ 
+        
+
+

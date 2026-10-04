@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <title>Document</title>
+    <style>
+        * {
+            Margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            height: 60px;
+            width: 100%;
+            background-color: pink;
+            display: flex;
+            position: fixed;
+            top: 0;
+        }
+
+        h5 {
+            width: 70vh;
+            height: 60px;
+            /* background-color: rgb(0, 255, 64); */
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: bold;
+            margin-left: 15px;
+            color: white;
+        }
+
+        .top {
+            width: 140vh;
+            height: 100%;
+            /* background-color: pink; */
+            display: flex;
+
+        }
+
+        ul {
+            display: flex;
+            margin-left: 20px;
+            padding: 10px 5px;
+            list-style-type: none;
+
+        }
+
+        .link {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .li {
+            padding: 10px 50px;
+            font-size: 20px;
+            color: black;
+        }
+
+        .main {
+            /* margin-top: 110px; */
+            background-image: url(./Third/vector-pink-color-flat-abstract-background-with-light-effects-vector-illustration_921039-18004.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .info {
+            height: 70vh;
+            width: 40vh;
+            background-color: lightseagreen;
+            margin-top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid pink;
+            color: white;
+            border-radius: 10px;
+           margin-left: 80vh;
+        }
+
+        img {
+            width: 25vh;
+            max-height: 25vh;
+            border-radius: 20px;
+            border: 2px solid pink;
+        }
+
+        .logo {
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+            align-items: center;
+            margin-top: -40px;
+        }
+
+        span {
+            margin-top: 20px;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            text-align:
+                center;
+            display: block;
+        }
+
+        .contact {
+            width: 35vh;
+            height: 20vh;
+            column-gap: 20px;
+            padding-top: 20px;
+            /* margin: 30px 20px; */
+
+            /* background-color: aqua; */
+        }
+
+        ol {
+            font-size: 14px;
+            font-family: 'Times New Roman', Times, serif;
+            list-style-type: none;
+        }
+
+        .li1 {
+            padding-top: 15px;
+        }
+
+        .but {
+            width: 125px;
+            height: 35px;
+            border-radius: 50px;
+            background-color: rgb(230, 109, 129);
+            color: white;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 45px 50px;
+        }
+
+        .link:hover {
+            color: rgb(19, 137, 184);
+        }
+
+        .about {
+
+             width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+            color: white;
+            
+            /* width: 100%;
+            height: auto;
+            color: white;
+            padding-top: 80px;
+            display: block; */
+        }
+
+        .about h1 {
+            color: lightseagreen;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .about p {
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+
+        .html {
+            /* padding: 20px 20px; */
+            margin-top: 70px;
+        }
+
+        .tech {
+             width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            gap: 30px 120px;
+            padding-bottom: 80px;
+            margin-left: 20px;
+            padding-top: 120px;;
+
+            /* display: flex;
+            flex-direction: row;
+            gap: 30px 120px;
+            padding-bottom: 80px;
+            margin-left: 20px;
+            padding-top: 80px; */
+        }
+
+        .tech h2 {
+            color: rgb(12, 240, 228);
+            font-weight: bold;
+            
+
+        }
+
+        .home {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+
+        }
+
+        .home h1 {
+            font-size: 50px;
+            margin-bottom: 50px;
+            color: greenyellow;
+        }
+
+        .home h2 {
+
+            font-size: 40px;
+            color: lightseagreen;
+        }
+
+        .connect {
+            height: 60vh;
+            width: 100vh;
+            background-color: lightseagreen;
+            /* margin-top: 100px; */
+            display: flex;
+            flex-direction: column;
+            border: 1px solid grey;
+            color: white;
+            border-radius: 10px;
+            /* margin-left: 200px; */
+            padding: 20px;
+
+        }
+
+        .form {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .connect h3 {
+            /* background-color: aqua; */
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        .input {
+            border-radius: 15px;
+            margin-left: 20px;
+            width: 90%;
+            height: 30px;
+        }
+
+        .textarea {
+            width: 200px;
+            height: 50px;
+            border-radius: 15px;
+            margin-left: 25px;
+        }
+
+        .connect button {
+            border-radius: 15px;
+            margin-left: 110px;
+            width: 44%;
+            height: 35px;
+            font-size: 20px;
+            font-weight: 20;
+            background-color: rgb(230, 109, 129);
+            color: white;
+            margin-top: 20px;
+        }
+        @media screen and (max-width: 768px)
+         {
+
+    
+    nav {
+        height: auto;
+        min-height: 60px;
+        width: 100%;
+        flex-direction: column;
+        position: relative;
+    }
+
+    h5 {
+        width: 100%;
+        height: 50px;
+        justify-content: center;
+        font-size: 25px;
+        margin-left: 0;
+    }
+
+    .top {
+        width: 100%;
+        height: auto;
+    }
+
+    ul {
+        width: 100%;
+        margin-left: 0;
+        padding: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .li {
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+
+
+    
+    .home {
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+    }
+
+    .home h1 {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .home h2 {
+        font-size: 22px;
+    }
+
+
+    
+    .about {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 20px 40px;
+    }
+
+    .about h1 {
+        font-size: 25px;
+    }
+
+    .about p {
+        padding: 15px 5px;
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+
+  
+    .tech {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+        margin-left: 0;
+        padding: 80px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .tech h2 {
+        font-size: 25px;
+    }
+
+    .html {
+        width: 100px;
+        height: 100px;
+        margin-top: 10px;
+        object-fit: contain;
+    }
+
+
+    .info {
+        width: 90%;
+        height: auto;
+        min-height: 550px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
+
+    span {
+        font-size: 14px;
+    }
+
+    .contact {
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    ol {
+        font-size: 14px;
+    }
+
+    .li1 {
+        padding-top: 15px;
+        text-align: center;
+    }
+
+    .but {
+        margin: 30px auto;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h5> Portfolio.</h5>
+
+        <div class="top">
+            <ul>
+                <li class="li"><a href="#home" class="link">Home</a></li>
+                <li class="li"><a href="#about" class="link">About</a></li>
+                <li class="li"><a href="./Resume.html" class="link">Resume</a></li>
+                <li class="li"><a href="#tech" class="link">Tech</a></li>
+                <li class="li"><a href="#contact" class="link">Contact</a></li>
+            </ul>
+        </div>
+        <!-- <div class="req-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button>Get Started</button>
+        </div> -->
+    </nav>
+    <div class="main">
+
+        <div class="home" id="home">
+            <h1> Welcome to MY Portfolio </h1>
+            <h2> Explore My Career Journey </h2>
+        </div>
+        <div class="about" id="about">
+            <h1> WHO AM I... <span3 style="color: forestgreen"> __________________ </span3>
+            </h1>
+            <p> Experienced in Application Support Engineer with 4+ years of expertise in banking domain production
+                support for Deutsche Bank. Skilled in incident management, Service Request management, SQL, UNIX and
+                application monitoring. Proven ability to troubleshoot complex issues and ensure application stability,
+                SLA compliance, minimize downtime,timely regulatory submissions, and end-to-end system monitoring in
+                mission-critical banking environments.</p>
+                </div>
+            <div class="tech" id="tech">
+                <h2> WHAT I DO! </h2>
+                <img src="./sql-icon-with-a-database-and-computer-vector.jpg" alt="" class="html">
+                <img src="./html icon.webp" alt="" class="html">
+                <img src="./css-3d-icon-png.webp" alt="" class="html">
+            </div>
+    </div>
+    <div class="info" id="contact">
+        <div class="logo">
+            <img src="./Karthiga-G.jpeg" alt="">
+            <span>Karthiga Manikandan</span>
+            <span>Production Support Engineer </span>
+        </div>
+        <div class="contact">
+            <ol>
+
+                <li class="li1">
+                    <span1 style="color: green;"> <i class="fa-solid fa-phone"></i> </span1> +91 9342726646
+                </li>
+                <li class="li1">
+                    <span1 style="color: red;"> <i class="fa-regular fa-envelope"></i></span1>
+                    karthigamanikandan15@gmail.com
+                </li>
+                <li class="li1">
+                    <span1 style="color: blue;"> <i class="fa-solid fa-location-dot"></i> </span1> Melur, Madurai
+                </li>
+                <li class="li1">
+                    <span1 style="color: rgb(231, 15, 148);"> <i class="fa-solid fa-venus"></i> </span1> 15-06-1999
+                </li>
+            </ol>
+            <button class="but"> <a href="./Resume.html"></a>
+                <span2 style="color:white"> <i class="fa-solid fa-download"></i> </span2> Download CV
+            </button>
+        </div>
+        <!-- 
+        <div class="connect">
+            <h3> Let's Connect </h3>
+            <div class="form">
+                <input type="text" class="input" placeholder="Enter Your Full Name">
+            </div>
+            <div class="form">
+
+                <input type="text" class="input" placeholder="Enter Your Phone Number">
+            </div>
+            <div class="form">
+
+                <input type="text" class="input" placeholder="Enter Your E-mail Adress">
+            </div>
+            <div class="form">
+                <input type="textarea" class="textarea" placeholder="Suggestions/Queries">
+            </div>
+            <button>Submit</button>
+        </div> -->
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

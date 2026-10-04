@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+        Margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    .dropdown{
+        background-color: azure;
+        color: black;
+        width: 100px;
+        height: auto;
+        margin: 50px auto;
+        padding: 2px;
+    }
+    .ul{
+        background-color: orange;
+        list-style-type: none;
+        padding: 2px;
+        border: 1px solid black;
+        text-align: center;
+        display: none;
+
+    }
+    button{
+        width:100%;
+        font-size: 16px;
+        background-color: blueviolet;
+    }
+    .link{
+        text-decoration: none;
+        font-size: 18px;
+        display: block;
+
+    }
+    ul>li{
+        border-bottom: 2px solid black;
+        padding: 5px 5px;
+    }
+    .dropdown:hover .ul{
+        display: block;
+    }
+    .link:hover{
+        background-color: greenyellow;
+        color: white;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <button>Menu</button>
+        <ul class="ul">
+            <li> <a href="" class="link">Home</a> </li>
+            <li> <a href="" class="link">About</a> </li>
+            <li> <a href="" class="link">Contact</a> </li>
+            <li> <a href="" class="link">Help</a> </li>
+        </ul>
+    </div>
+</body>
+</html>

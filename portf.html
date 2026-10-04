@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        nav {
+            width: 100%;
+            height: 10vh;
+            /* background-color: aqua; */
+            display: flex;
+        }
+
+        .edu-pro {
+            width: 250px;
+            height: 100%;
+            /* background-color: green; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .edu-pro img {
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .edu-pro span {
+            font-size: 30px;
+            font-weight: 600;
+            margin-left: 15px;
+            font-family: sans-serif;
+        }
+
+        .ul {
+            /* background-color: red; */
+            width: 600px;
+            height: 100%;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .ul>li {
+            /* background-color: orange; */
+            /* border:1px solid black; */
+            list-style-type: none;
+            padding: 15px 20px;
+        }
+
+        .link {
+            /* background-color: rgb(217, 0, 255); */
+            text-decoration: none;
+
+        }
+
+        .request-btn {
+            width: 300px;
+            height: 100%;
+            /* background-color: yellow; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+        }
+
+        .request-btn>i {
+            /* background-color: red; */
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 23px;
+            color: black;
+        }
+
+        .request-btn>button {
+            background-color: #0168f9;
+            font-size: 20px;
+            padding: 13px 25px;
+            border: none;
+            color: whitesmoke;
+            border-radius: 15px;
+            margin-left: 10px;
+        }
+
+
+        .hero-section {
+
+            width: 98vw;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .con {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            gap: 20px;
+            width: 50%;
+            padding: 20px 40px;
+            margin: 10px 30px;
+        }
+
+        .sub-heading {
+            color: #006bff;
+            font-size: 15px;
+            letter-spacing: 1px;
+        }
+
+        .heading {
+            font-size: 47px;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .description {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        .button1 {
+            background-color: #006bff;
+            color: white;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid #006bff;
+            margin-right: 10px;
+        }
+
+        .button2 {
+            background-color: white;
+            color: #006bff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 10px;
+            border: 1px solid #006bff;
+            margin-right: 10px;
+        }
+
+        .work-img {
+            width: 40%;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            
+        }
+
+        .work-img img {
+            width: 100%;
+            height: 100%;
+            margin-top: 70px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .expert {
+            width: 250px;
+            height: 170px;
+            background-color: white;
+            border: 1px solid rgb(223, 96, 117);
+            margin: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* gap: 3px; */
+
+        }
+
+        .img {
+
+            width: 50px;
+            height: 40px;
+            margin-bottom: 30px;
+            margin-right: 50px;
+
+            padding: 3px;
+            /* display: block;
+            margin: 10px auto;   */
+        }
+
+        h3 {
+            margin: 5px;
+            padding: 2px;
+
+        }
+
+        .main {
+            width: 98vw;
+            height: 350px;
+            border: 2px solid rgb(255, 123, 0);
+            align-items: center;
+            display: flex;
+            margin-left: 5px;
+
+        }
+
+        h4 {
+            width: 130px;
+            height: 30px;
+            background-color: rgb(255, 123, 0);
+            margin-left: 3px;
+            border-radius: 8px;
+            margin-bottom: -30px;
+            /* display: block; */
+            /* margin-bottom: 50vh; */
+        }
+
+        .abt-img {
+            /* background-color: blueviolet; */
+            margin-right: 60px;
+
+            width: 50%;
+            height: 100%;
+        }
+
+        #girl {
+            width: 40vw;
+            height: 40vh;
+            margin-top: 40px;
+
+        }
+
+        .abt-cntnt {
+            width: 50%;
+            height: 100%;
+            margin-top: 90px;
+            margin-left: 50px;
+
+
+        }
+
+        h5 {
+            color: rgb(1, 144, 201);
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .p1 {
+            padding: 10px;
+            margin-top: 10px;
+            gap: 5px;
+
+        }
+
+        .but {
+            margin: 30px;
+            width: 130px;
+            height: 40px;
+            background-color: #006bff;
+            border-radius: 10px;
+            color: white;
+        }
+         @media screen and (max-width: 800px) 
+         {
+
+    nav {
+        width: 100%;
+        height: 70px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .edu-pro {
+        width: auto;
+        height: 70px;
+        margin-left: 15px;
+    }
+
+    .edu-pro img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .edu-pro span {
+        font-size: 25px;
+        margin-left: 8px;
+    }
+
+    .ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background-color: lightseagreen;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        overflow: hidden;
+        transition: height 1s ease;
+        z-index: 10;
+    }
+
+    .ul > li {
+        padding: 15px;
+    }
+
+    .link {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+    }
+
+    
+    .request-btn {
+        display: none;
+    }
+
+    
+    /* .menu-bar {
+        display: flex;
+        margin-left: auto;
+        margin-right: 20px;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 20;
+    } */
+
+    .hero-section {
+        width: 100%;
+        min-height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+    .con {
+        width: 100%;
+        margin: 0;
+        padding: 40px 20px;
+
+        align-items: center;
+        text-align: center;
+    }
+
+    .heading {
+        font-size: 35px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .button1,
+    .button2 {
+        margin-right: 0;
+    }
+
+    .work-img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .work-img img {
+        width: 100%;
+        height: 100%;
+        margin-top: 0;
+        object-fit: cover;
+    }
+
+    .expert {
+        width: 250px;
+        height: 170px;
+        margin: 30px auto;
+    }
+
+    h4 {
+        margin: 20px auto;
+    }
+
+    .main {
+        width: 95%;
+        height: auto;
+        margin: 20px auto;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .abt-img {
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #girl {
+        width: 90%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .abt-cntnt {
+        width: 90%;
+        height: auto;
+
+        margin: 30px auto;
+
+        text-align: center;
+    }
+
+    .p1 {
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    .but {
+        margin: 20px;
+    }
+}
+      
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="edu-pro" id="edu-pro">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzKoMwJAW8qg_mm7-k0gNwcWManSEtdmXa_W44_e5ctg&s=10"
+                alt="">
+            <span>EduPro</span>
+        </div>
+        <ul class="ul" id="ul">
+            <li><a href="" class="link">Home</a></li>
+            <li><a href="" class="link">About</a></li>
+            <li><a href="" class="link">Course</a></li>
+            <li><a href="" class="link">Blog</a></li>
+            <li><a href="" class="link">Contact</a></li>
+        </ul>
+        <div class="request-btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <button>Get Started</button>
+        </div>
+        <i class="fa-solid fa-bars" onclick="toggle()"></i>
+
+    </nav>
+    <div class="hero-section" id="section">
+        <div class="con">
+            <h3 class="sub-heading">LEARN ANYTHING, ANYWHERE</h3>
+            <h1 class="heading">Build Your Future With Better Learning</h1>
+            <p class="description">Join thousands of students and learn new skills with our expert insturctors.</p>
+            <div class="btn-group">
+                <button class="button1">Explore Courses</button>
+                <button class="button2">Watch Video</button>
+            </div>
+        </div>
+        <div class="work-img">
+            <img src="./Third/working-girl-is-standing-office-dress_746565-72789.jpg">
+        </div>
+    </div>
+
+    <div class="expert" id="expert">
+        <div class="img">
+            <img src="./Third/8444b34a-a4c0-4c3d-9ac4-0d6f194f8e2d.png" alt="">
+        </div>
+        <h3> Expert Instructorts</h3>
+        <p> Learn from industry experts <br> with real-world experience</p>
+    </div>
+    <h4> 4.About Section</h4>
+    <div class="main" id="main">
+
+        <div class="abt-img">
+            <img src="./Third/exprience-girl.jpg" alt="" id="girl">
+        </div>
+
+        <div class="abt-cntnt">
+            <h5> ABOUT US </h5>
+            <h2> We Are Committed <br> To Your Sucess</h2>
+            <p class="p1"> We provide high-quality, affordable and flexible<br>
+                learning opportunities for everyone, Our mission<br>
+                is to make education accessible to all.
+            </p>
+            <button class="but"> Learn More </button>
+        </div>
+    </div>
+     <script>
+        let toggled= false;
+        function toggle(){
+            if(!toggled){
+                document.getElementById("ul").style.height= "300px";
+                toggled=true;
+                return;
+            }
+            if(toggled){
+                document.getElementById("ul").style.height= "";
+                toggled=false;
+                return;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

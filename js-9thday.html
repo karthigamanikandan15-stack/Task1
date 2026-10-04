@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        .con1{
+            width:400px;
+            height:350px;
+            background-color: lightseagreen;
+            padding:20px;
+            margin: 10px 50px;   
+        }
+
+        form{
+            display: flex;
+            flex-direction: column; 
+            column-gap: 5px;
+            gap:  20px;
+            padding: 5px 5px;
+        }
+        input{
+            width: 90%;
+            border-radius: 20px;
+            margin-left: 10px;
+            padding: 5px;
+        }
+        label{
+            color: brown;
+            margin-top: 10px;
+        }
+        button{
+            width:50%;
+            height: 30px;
+            margin: 15px 90px;
+            padding: 5px;
+            color: black;
+        }
+        #result{
+            width:400px;
+            height:350px;
+            background-color: lightsalmon;
+            color: brown;
+            margin: 30px 50px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+    <div class="con1">
+        <label for="">Student Name:</label>
+        <input type="text" id="sname"> <br>
+        <label for="">Student ID:</label>
+         <input type="text" id="id"> <br>
+        <label for="">E-mail:</label>
+         <input type="text" id="mail"> <br>
+        <label for="">Department:</label>
+         <input type="text" id="dept"> <br>
+        <label for="">Mark:</label>
+         <input type="Number" id="mark"> 
+          <button type="button" onclick="calc()">Submit</button>
+    </div>
+    <div id="result">
+
+    </div>
+    </form>
+   
+    
+    <script>
+        function calc(){
+            let name=document.getElementById("sname").value.trim();
+            if (name == "") 
+            {
+                 document.getElementById("result").innerHTML = 
+                 'Student Name cannot be empty';
+                return;
+             }
+            name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+           document.getElementById("result").innerHTML=name
+           
+
+            let  ident= document.getElementById("id").value.trim();
+            ident= id.startswith("STU");
+            ident= id.length==6;
+            ident=!id.includes(" ");
+            if(!ident)
+            {
+                document.getElementById("result")='Enter your ID';
+            return;
+        }
+        // document.getElementById("result").innerHTML=ident;
+
+
+let validId = studentId.startsWith("STU") && studentId.length == 6 && !studentId.includes(" "); 
+if (!validId) { document.getElementById("result").innerHTML = "<p class='error'>Invalid Student ID</p>"; return; }
+
+              if(ident=" ")
+        {
+            alert='Please enter your ID'; 
+        }else
+            document.getElementById("result").innerHTML=ident;
+            
+
+        }
+    </script>
+</body>
+</html>

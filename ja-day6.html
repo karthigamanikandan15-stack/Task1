@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .con{
+            width:200px;
+            height: 200px;
+
+        }
+        img{
+            width:200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head" class="header">Js</h1>
+    <div class="con">
+        <p style="text-align: center;">
+            <button onclick="on()">Turnon</button>
+            <button onclick="off()">Turnoff</button>
+        </p>
+        <img src="./Light-ON.jpg" alt="Light off" id="img">
+    </div>
+    <script>
+    function on()
+    {
+  let img= document.getElementById("img").src="./Light-ON.jpg";
+   console.log(img.src)
+    }
+     function off()
+    {
+   let img=document.getElementById("img").src="./Light-off.jpeg";
+   console.log(img.src)
+    }
+    </script>
+</body>
+</html>

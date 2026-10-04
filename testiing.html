@@ -1,0 +1,256 @@
+
+User attachment
+simple CSS and html code fot thid
+Sure. Here is a simple HTML + CSS version of the design in your image. I have kept the code beginner-friendly and used simple div, img, h3, and p elements.
+
+HTML + CSS
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Life at Infiniti</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 10px;
+        }
+
+        /* Main heading */
+        .title {
+            background-color: #243b68;
+            color: white;
+            padding: 5px;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        /* First section */
+        .life {
+            width: 95%;
+            margin: auto;
+            background-color: #17466b;
+            border: 8px solid #d9e5e5;
+            display: flex;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .life-img {
+            width: 38%;
+            text-align: center;
+        }
+
+        .life-img img {
+            width: 230px;
+            height: 300px;
+            border-radius: 50%;
+            border: 5px solid #b8d4dc;
+            object-fit: cover;
+        }
+
+        .life-text {
+            width: 62%;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.4;
+        }
+
+        .quote {
+            font-size: 30px;
+        }
+
+        .name {
+            color: #e6b54a;
+            text-align: right;
+            font-size: 18px;
+        }
+
+        /* Star Profile heading */
+        .star-title {
+            background-color: #243b68;
+            color: white;
+            padding: 5px;
+            font-size: 18px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+
+        /* Star profile section */
+        .star {
+            width: 95%;
+            height: 340px;
+            margin: auto;
+            display: flex;
+            background: linear-gradient(
+                105deg,
+                #10515b 0%,
+                #10515b 55%,
+                #c64c49 55%,
+                #c64c49 100%
+            );
+            align-items: center;
+        }
+
+        .profile {
+            width: 35%;
+            text-align: center;
+            color: white;
+        }
+
+        .profile img {
+            width: 170px;
+            height: 170px;
+            object-fit: cover;
+            border: 5px solid #d7d9f5;
+        }
+
+        .profile p {
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+
+        .profile-text {
+            width: 65%;
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .yellow {
+            color: #e6c23c;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Life at Infiniti -->
+    <h3 class="title">Life at Infiniti</h3>
+
+    <div class="life">
+
+        <div class="life-img">
+            <img src="./Third/senthil.jpeg" alt="Mr. SenthilNathan">
+        </div>
+
+        <div class="life-text">
+
+            <div class="quote">"</div>
+
+            <p>
+                "Infiniti is the perfect place for the freshers to Work & Learn.
+                In Infiniti lots of opportunities to learn domain, technologies,
+                business, culture, good habits and many more skills.
+                I learned a lot during that past ten years period and still
+                learning. Infiniti provides me an identity in my family life
+                & society. I would feel like my home.
+            </p>
+
+            <p>
+                Gained an industry knowledge & business experience while
+                working in Infiniti. Excellent pay and an extremely beautiful
+                work environment.
+            </p>
+
+            <p>
+                Infiniti gives me the freedom to decide how you work like to
+                go about the project. Friends (co-workers) & management are
+                helped me a lot and aid when I needed.
+            </p>
+
+            <div class="quote">"</div>
+
+            <p class="name">- Mr. SenthilNathan</p>
+
+        </div>
+
+    </div>
+
+
+    <!-- Star Profile -->
+    <h3 class="star-title">Star Profile</h3>
+
+    <div class="star">
+
+        <div class="profile">
+
+            <img src="./Third/amala.jpeg" alt="Mrs. Amala Mary">
+
+            <p>
+                Mrs.Amala Mary<br>
+                Business Analyst
+            </p>
+
+        </div>
+
+        <div class="profile-text">
+
+            <p>
+                <span class="yellow">Inspiration:</span> Mom, Dr.ABJ<br>
+
+                <span class="yellow">Memorable milestone:</span>
+                Winning Infiniti Intrapreneurship<br>
+
+                <span class="yellow">One thing that I learned hard way:</span>
+                Cooking Biriyani<br>
+
+                <span class="yellow">Work-life balance:</span>
+                Planning my works<br>
+
+                <span class="yellow">
+                    The best advice that I got forever:
+                </span>
+                If you think of buying a car, target buying a Flight
+                then you end up buying a car
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+Images
+Put your two images in the same folder as the HTML file:
+
+index.html
+person1.jpg
+person2.jpg
+Then change:
+
+<img src="person1.jpg">
+
+and
+
+<img src="person2.jpg">
+to your actual image filenames.
+
+Important part for the second section
+The blue + red diagonal background is created using:
+
+background: linear-gradient(
+    105deg,
+    #10515b 0%,
+    #10515b 55%,
+    #c64c49 55%,
+    #c64c49 100%
+);
+So you don't need to create a separate image for that background.
+
+
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+        /* *{
+            margin: 2px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        */
+    </style>
+</head>
+<body>
+    <h1 id="head">Java Script</h1>
+    <from action="">
+        <label for=""><b>Username:</b></label>
+        <input type="text" id="user"><br>
+         <label for=""><b>E-Mail</b></label>
+        <input type="email" id="mail"><br>
+         <label for=""><b>Password:</b></label>
+        <input type="password" id="password"><br>
+        <label for=""><b>Phone Number:</b></label>
+        <input type="telephone" id="number"><br>
+        <label for=""><b>Address:</b></label>
+        <input type="text" id="address"><br>
+         <label for=""><b>Gender:</b></label><br>
+        <label for="">Male</label>
+        <input type="radio" name="gender" value="male" id="male"><br>
+        <label for=""> Female</label>  
+        <input type="radio" name="gender" value="Female" id="female"><br>
+        <label for="">Others</label>
+        <input type="radio" name="gender" value="Others" id="others"><br>
+    </from>
+    <input type="submit" value="submit" onclick=" validation()">
+    <script>
+        function validation(){
+            let username=document.getElementById("user").value.trim()
+            console.log(username)
+            let mail=document.getElementById("mail").value.trim()
+            console.log(mail)
+            let password=document.getElementById("password").value
+            console.log(password)
+            let number=document.getElementById("number").value
+            console.log(number)
+            let address=document.getElementById("address").value
+            console.log(address)
+        //     let male=document.getElementById("male").checked;
+           
+        //     let female=document.getElementById("female").checked;
+            
+        //     let others=document.getElementById("others").checked;
+            
+        // let gender;
+        // if (male)
+        // {
+        //     gender=document.getElementById("male").value
+        // }else if (female){
+        //     gender=document.getElementById("female").value
+        // }else if(others){
+        //     gender=document.getElementById("female").value
+        // }
+        // console.log(gender)
+        // }
+
+        let gender= document.querySelector('input[name="gender"]:checked');
+            console.log(gender.value);
+           
+        }
+         let element= document.querySelector("#head").innerHTML="JAVA";
+            console.log(element)
+
+        // let Name="                hello world!"
+        // let result= Name.trim(); //trim
+        // console.log(result)
+
+       
+        
+    </script>
+</body>
+</html>  
