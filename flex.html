@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Flexbox Challenge</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, sans-serif
+        }
+        .main{
+            width:90%;
+            margin:50px auto;
+            background-color: lightgreen;
+            padding: 20px;   
+            display: flex; 
+            flex-wrap: wrap;
+            gap: 20px;        
+
+        }
+        .box{
+            /* height: 300px; */
+            background-color: lightseagreen;
+            flex:1 1 300px; /* grow shrink basis */
+            font-size:1.7vw;
+            padding: 20px;
+        }
+        
+        @media screen and (max-width:550px){
+            .main{
+                flex-direction: column;
+                /* background-color: yellow; */
+            }
+            .box{
+                width:100%;
+                /* background-color: darkgreen; */
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+        }
+         @media screen and (max-width:700px){
+            .main{
+                flex-direction: column;
+                background-color: lightpink;
+
+            }
+            .box{
+                width:100%;
+                background-color: lightblue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                 
+            }
+           
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="box box1">
+           Chandrasekaran Joseph Vijay was born on 22 June 1974 in Madras (Chennai).
+           He began acting as a child artist in Vetri (1984) and debuted as a lead in Naalaiya Theerpu (1992).
+           He became one of Tamil cinema’s biggest stars, popularly known as “Thalapathy” for his mass appeal.
+           In 2024, he founded the political party Tamilaga Vettri Kazhagam (TVK).
+           Vijay was sworn in as the 9th Chief Minister of Tamil Nadu on 10 May 2026.
+        
+        </div>
+        <div class="box box2">
+            <img src="./New/Indian-Actor-Vijay-Politician-Addresses-Public-At-Puducherry-India-2025.webp" 
+            alt="" style = "width:100%;height: 100%;">
+        </div>
+       
+    </div>
+
+</body>
+
+</html>
