@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form</title>
+</head>
+
+<body>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        form{
+            background-color: lightseagreen;
+            height: 200px;
+            width: 300px;
+            border: 1px solid rgb(27, 230, 71) ;
+            margin: 50px auto;
+        }
+        label{
+            margin-left: 10px;   
+        }
+        input{
+            margin-left: 10px;
+            height: 30px;
+        }
+        button{
+            width: 70px;
+            height: 30px;
+            margin: 10px 10px;
+            border-radius: 3px;
+            color: white;
+            background-color: rgb(12, 12, 214);
+            border-radius: 8px;
+        }
+    </style>
+
+<form>
+
+    <label for="name">Name</label><br>
+    <input type="text" id="name"><br>
+    <label for="age">Age</label><br>
+    <input type="number" id="age"><br>
+    <label for="email">E-mail</label><br>
+    <input type="email" id="email"><br>
+
+    <button type="button" onclick="sub()">Submit</button>
+
+</form>
+
+<script>
+
+function Sample(name,age,email)
+{
+    console.log(name);
+    console.log(age);
+    console.log(email);
+}
+
+function sub()
+{
+    let name = document.getElementById("name").value;
+    let age = document.getElementById("age").value;
+    let email = document.getElementById("email").value;
+
+    Sample(name,age,email);
+}
+
+</script>
+
+</body>
+</html>
