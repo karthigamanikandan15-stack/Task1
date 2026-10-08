@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+        #fan {
+            width: 200px;
+        }
+        button{
+            width: 40px;
+            height: auto;
+            margin-top: 50px;
+            border: 1px solid blueviolet;
+            border-radius: 5px;
+            color: white;
+            background-color:lightseagreen;
+
+
+        }
+
+        .rotate {
+            animation: fan 1s linear infinite;
+        }
+
+        @keyframes fan {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <img id="fan" src="./ee7ee311-8bf3-4a7a-ac67-c607c92882c8.jpg">
+
+    <br><br>
+    <button onclick="startFan()">ON</button>
+    <button onclick="speed1()">1</button>
+    <button onclick="speed2()">2</button>
+    <button onclick="speed3()">3</button>
+    <button onclick="stopFan()">OFF</button>
+
+    <script>
+
+        let fan = document.getElementById("fan");
+
+        function startFan() {
+            fan.className = "rotate";
+            fan.style.animationDuration = "0.3s";
+        }
+
+        function speed1() {
+            fan.className = "rotate";
+            fan.style.animationDuration = "2s";
+        }
+
+        function speed2() {
+            fan.className = "rotate";
+            fan.style.animationDuration = "1s";
+        }
+
+        function speed3() {
+            fan.className = "rotate";
+            fan.style.animationDuration = "0.5s";
+        }
+
+        function stopFan() {
+            fan.className = "";
+        }
+
+    </script>
+
+</body>
+</html>
