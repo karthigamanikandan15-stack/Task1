@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glow & Grace Beauty Parlour</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fdf2f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .billing-card {
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(190, 24, 93, 0.08);
+      border: 1px solid #fbcfe8;
+      width: 100%;
+      max-width: 900px;
+      padding: 35px;
+    }
+
+    .header-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px dashed #fbcfe8;
+      padding-bottom: 20px;
+      margin-bottom: 25px;
+    }
+
+    .header-area h1 {
+      font-size: 24px;
+      color: #be185d;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    .bill-meta {
+      font-size: 13px;
+      color: #6b7280;
+      text-align: right;
+    }
+
+    .input-grid {
+      display: flex;
+      gap: 12px;
+      align-items: flex-end;
+      background: #fff5f8;
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      border: 1px solid #fbcfe8;
+    }
+
+    .input-field {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-field.service { flex: 2; }
+    .input-field.qty { flex: 1; }
+    .input-field.price { flex: 1; }
+
+    .input-field label {
+      font-size: 12px;
+      font-weight: bold;
+      color: #be185d;
+      margin-bottom: 6px;
+    }
+
+    .input-field input {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #f472b6;
+      border-radius: 8px;
+      outline: none;
+    }
+
+    .btn-add {
+      background-color: #be185d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .table-wrapper {
+      margin-bottom: 25px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 10px;
+    }
+
+    thead th {
+      color: #6b7280;
+      font-size: 12px;
+      padding: 0 16px 6px 16px;
+      text-align: left;
+    }
+
+    thead th.center { text-align: center; }
+
+    tbody tr {
+      background-color: #fdf8fa;
+    }
+
+    tbody td {
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #1f2937;
+      border-top: 1px solid #fbcfe8;
+      border-bottom: 1px solid #fbcfe8;
+    }
+
+    tbody td:first-child {
+      border-left: 1px solid #fbcfe8;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      font-weight: bold;
+    }
+
+    tbody td:last-child {
+      border-right: 1px solid #fbcfe8;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    tbody td.center { text-align: center; }
+
+    .btn-remove {
+      background-color: #fee2e2;
+      color: #dc2626;
+      border: 1px solid #fca5a5;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .summary-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff5f8;
+      border: 1px solid #fbcfe8;
+      border-radius: 12px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+    }
+
+    .payment-method label {
+      font-size: 14px;
+      font-weight: bold;
+      color: #1f2937;
+    }
+
+    .payment-method select {
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid #f472b6;
+      outline: none;
+    }
+
+    .grand-total-box {
+      text-align: right;
+    }
+
+    .grand-total-label {
+      font-size: 12px;
+      font-weight: bold;
+      color: #6b7280;
+    }
+
+    .grand-total-value {
+      font-size: 26px;
+      font-weight: bold;
+      color: #be185d;
+    }
+
+    .actions-bar {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .btn-print {
+      background-color: #4b5563;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .btn-new {
+      background-color: #be185d;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="billing-card">
+    <div class="header-area">
+      <div>
+        <h1>Glow & Grace Beauty Parlour</h1>
+        <div class="subtitle">Quick Billing Desk</div>
+      </div>
+      <div class="bill-meta">
+        <div><strong>Date:</strong> 6 Nov 2026</div>
+        <div><strong>Invoice #:</strong> #1001</div>
+      </div>
+    </div>
+
+    <div class="input-grid">
+      <div class="input-field service">
+        <label>SERVICE / PRODUCT</label>
+        <input type="text" id="name" placeholder="e.g. Haircut, Facial" />
+      </div>
+      <div class="input-field qty">
+        <label>QTY</label>
+        <input type="number" id="qty" value="1" min="1" />
+      </div>
+      <div class="input-field price">
+        <label>PRICE (₹)</label>
+        <input type="number" id="price" placeholder="0.00" />
+      </div>
+      <button type="button" class="btn-add" onclick="addItem()">+ Add</button>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>SERVICE DETAILS</th>
+            <th class="center">QUANTITY</th>
+            <th class="center">RATE</th>
+            <th class="center">AMOUNT</th>
+            <th class="center">ACTION</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+          <!-- Rows will be added here -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="summary-section">
+      <div class="payment-method">
+        <label>Payment Mode:</label>
+        <select>
+          <option>Cash</option>
+          <option>UPI</option>
+          <option>Card</option>
+        </select>
+      </div>
+      <div class="grand-total-box">
+        <div class="grand-total-label">TOTAL PAYABLE AMOUNT</div>
+        <div class="grand-total-value">₹<span id="grandTotal">0.00</span></div>
+      </div>
+    </div>
+
+    <div class="actions-bar">
+      <button type="button" class="btn-print" onclick="window.print()">Print / Save Invoice</button>
+      <button type="button" class="btn-new" onclick="clearBill()">Start New Bill</button>
+    </div>
+  </div>
+
+  <script>
+    let total = 0;
+
+    function addItem() {
+      let name = document.getElementById('name').value;
+      let qty = Number(document.getElementById('qty').value) || 1;
+      let price = Number(document.getElementById('price').value) || 0;
+
+      if (!name || price <= 0) return alert("Please fill details");
+
+      let itemTotal = qty * price;
+      total += itemTotal;
+
+      let row = `<tr>
+        <td>${name}</td>
+        <td class="center">${qty}</td>
+        <td class="center">₹${price.toFixed(2)}</td>
+        <td class="center">₹${itemTotal.toFixed(2)}</td>
+        <td class="center"><button class="btn-remove" onclick="removeItem(this, ${itemTotal})">Remove</button></td>
+      </tr>`;
+
+      document.getElementById('tableBody').innerHTML += row;
+      document.getElementById('grandTotal').innerText = total.toFixed(2);
+
+    
+      document.getElementById('name').value = '';
+      document.getElementById('qty').value = '1';
+      document.getElementById('price').value = '';
+    }
+
+    function removeItem(btn, itemTotal) {
+      btn.parentElement.parentElement.remove();
+      total -= itemTotal;
+      document.getElementById('grandTotal').innerText = total.toFixed(2);
+    }
+
+    function clearBill() {
+      document.getElementById('tableBody').innerHTML = '';
+      total = 0;
+      document.getElementById('grandTotal').innerText = "0.00";
+    }
+  </script>
+
+</body>
+</html>
